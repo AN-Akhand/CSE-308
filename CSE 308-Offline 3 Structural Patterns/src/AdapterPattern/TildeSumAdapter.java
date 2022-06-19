@@ -14,11 +14,7 @@ public class TildeSumAdapter implements AnotherSum {
         File input = File.createTempFile("temp", ".txt");
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("input_tilde.txt")));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(input)));
-        String s = reader.readLine();
-        while(s != null){
-            writer.write(s.replace('~', ' ') + '\n');
-            s = reader.readLine();
-        }
+        writer.write(reader.readLine().replace("~", " "));
         writer.close();
         spaceSum.calculateSum(input.getAbsolutePath());
         input.deleteOnExit();
