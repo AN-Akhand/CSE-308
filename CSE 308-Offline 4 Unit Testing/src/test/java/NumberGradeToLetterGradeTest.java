@@ -9,16 +9,12 @@ class NumberGradeToLetterGradeTest {
     class ConstructorTest{
         @Test
         void credit3DoesNotThrowExceptions(){
-            Assertions.assertDoesNotThrow(() -> {
-                new NumberGradeToLetterGrade("3");
-            });
+            Assertions.assertDoesNotThrow(() -> new NumberGradeToLetterGrade("3"));
         }
 
         @Test
         void credit4DoesNotThrowExceptions(){
-            Assertions.assertDoesNotThrow(() -> {
-                new NumberGradeToLetterGrade("4");
-            });
+            Assertions.assertDoesNotThrow(() -> new NumberGradeToLetterGrade("4"));
         }
 
         @Test
@@ -37,7 +33,7 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void nonNumberThrowsException(){
+        void nonNumberCreditThrowsException(){
             Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> new NumberGradeToLetterGrade("asd"));
         }
     }
@@ -65,6 +61,11 @@ class NumberGradeToLetterGradeTest {
         @Test
         void number300ShouldReturnA(){
             Assertions.assertEquals("A", gradeCalculator.calculateGrade("300"));
+        }
+
+        @Test
+        void number270ShouldReturnA(){
+            Assertions.assertEquals("A", gradeCalculator.calculateGrade("270"));
         }
 
         @Test
@@ -211,7 +212,7 @@ class NumberGradeToLetterGradeTest {
 
         @Test
         void number100ShouldReturnF(){
-            Assertions.assertEquals("F", gradeCalculator.calculateGrade("200"));
+            Assertions.assertEquals("F", gradeCalculator.calculateGrade("100"));
         }
 
         @Test

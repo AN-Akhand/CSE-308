@@ -7,10 +7,10 @@ public class NumberGradeToLetterGrade {
         try{
             credit = Integer.parseInt(s);
         }catch (NumberFormatException numberFormatException){
-            throw new IllegalArgumentException("Illegal credit");
+            throw new IllegalArgumentException("Non number or fractional credit credit");
         }
         if(credit != 3 && credit != 4){
-            throw new IllegalArgumentException("Illegal credit");
+            throw new IllegalArgumentException("Credit has to be 3 or 4");
         }
     }
 
