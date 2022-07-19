@@ -54,8 +54,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void number300point5ShouldThrowException(){
-            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("300.5"));
+        void number300point8ShouldThrowException(){
+            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("300.8"));
+        }
+
+        @Test
+        void number300point3ShouldThrowException(){
+            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("300.3"));
         }
 
         @Test
@@ -69,8 +74,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void number239point5ShouldReturnA(){
-            Assertions.assertEquals("A", gradeCalculator.calculateGrade("239.5"));
+        void number239point8ShouldReturnA(){
+            Assertions.assertEquals("A", gradeCalculator.calculateGrade("239.8"));
+        }
+
+        @Test
+        void number239point3ShouldReturnA(){
+            Assertions.assertEquals("A", gradeCalculator.calculateGrade("239.3"));
         }
 
         @Test
@@ -84,8 +94,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void number209point5ShouldReturnB(){
-            Assertions.assertEquals("B", gradeCalculator.calculateGrade("209.5"));
+        void number209point8ShouldReturnB(){
+            Assertions.assertEquals("B", gradeCalculator.calculateGrade("209.8"));
+        }
+
+        @Test
+        void number209point3ShouldReturnB(){
+            Assertions.assertEquals("B", gradeCalculator.calculateGrade("209.3"));
         }
 
         @Test
@@ -99,8 +114,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void number179point5ShouldReturnC(){
-            Assertions.assertEquals("C", gradeCalculator.calculateGrade("179.5"));
+        void number179point8ShouldReturnC(){
+            Assertions.assertEquals("C", gradeCalculator.calculateGrade("179.8"));
+        }
+
+        @Test
+        void number179point3ShouldReturnC(){
+            Assertions.assertEquals("C", gradeCalculator.calculateGrade("179.3"));
         }
 
         @Test
@@ -119,9 +139,15 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void numberNegative0point5ShouldThrowException(){
-            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("-0.5"));
+        void numberNegative0point3ShouldThrowException(){
+            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("-0.3"));
         }
+
+        @Test
+        void numberNegative0point8ShouldThrowException(){
+            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("-0.8"));
+        }
+
 
         @Test
         void numberNegative100ShouldThrowException(){
@@ -171,8 +197,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void number319point5ShouldReturnA(){
-            Assertions.assertEquals("A", gradeCalculator.calculateGrade("319.5"));
+        void number319point8ShouldReturnA(){
+            Assertions.assertEquals("A", gradeCalculator.calculateGrade("319.8"));
+        }
+
+        @Test
+        void number319point3ShouldReturnA(){
+            Assertions.assertEquals("A", gradeCalculator.calculateGrade("319.3"));
         }
 
         @Test
@@ -186,8 +217,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void number279point5ShouldReturnB(){
-            Assertions.assertEquals("B", gradeCalculator.calculateGrade("279.5"));
+        void number279point8ShouldReturnB(){
+            Assertions.assertEquals("B", gradeCalculator.calculateGrade("279.8"));
+        }
+
+        @Test
+        void number279point3ShouldReturnB(){
+            Assertions.assertEquals("B", gradeCalculator.calculateGrade("279.3"));
         }
 
         @Test
@@ -201,8 +237,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void number239point5ShouldReturnC(){
-            Assertions.assertEquals("C", gradeCalculator.calculateGrade("239.5"));
+        void number239point8ShouldReturnC(){
+            Assertions.assertEquals("C", gradeCalculator.calculateGrade("239.8"));
+        }
+
+        @Test
+        void number239point3ShouldReturnC(){
+            Assertions.assertEquals("C", gradeCalculator.calculateGrade("239.3"));
         }
 
         @Test
@@ -221,8 +262,13 @@ class NumberGradeToLetterGradeTest {
         }
 
         @Test
-        void numberNegative0point5ShouldThrowException(){
-            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("-0.5"));
+        void numberNegative0point3ShouldThrowException(){
+            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("-0.3"));
+        }
+
+        @Test
+        void numberNegative0point8ShouldThrowException(){
+            Assertions.assertThrowsExactly(IllegalArgumentException.class, ()-> gradeCalculator.calculateGrade("-0.8"));
         }
 
         @Test
